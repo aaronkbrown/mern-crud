@@ -3,6 +3,12 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
+// Login credentials for database
+var credentials = require('credentials.json');
+var userName = credentials.username;
+var passWord = credentials.password;
+var dataBase = credentials.database;
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
